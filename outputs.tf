@@ -17,3 +17,11 @@ output "eks_certificate" {
 output "token" {
   value = data.aws_eks_cluster_auth.this.token
 }
+
+output "oidc_arn" {
+  value = aws_iam_openid_connect_provider.this.arn
+}
+
+output "oidc_url" {
+  value = aws_iam_openid_connect_provider.this.url
+}
